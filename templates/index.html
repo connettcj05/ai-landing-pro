@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">Transforming Tomorrow with AI</h1>
+                <p class="lead mb-4">Unleash the power of artificial intelligence to solve complex challenges and drive innovation across industries.</p>
+                <a href="#contact" class="btn btn-primary btn-lg">Get Started</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a" alt="AI Visualization" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Solutions</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="feature-icon mb-3">
+                            <i data-feather="cpu"></i>
+                        </div>
+                        <h5 class="card-title">Machine Learning</h5>
+                        <p class="card-text">Advanced algorithms that learn and adapt to your business needs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="feature-icon mb-3">
+                            <i data-feather="message-square"></i>
+                        </div>
+                        <h5 class="card-title">Natural Language Processing</h5>
+                        <p class="card-text">Understanding and processing human language with unprecedented accuracy.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="feature-icon mb-3">
+                            <i data-feather="eye"></i>
+                        </div>
+                        <h5 class="card-title">Computer Vision</h5>
+                        <p class="card-text">Advanced image recognition and processing capabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="py-5 bg-dark">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1640622842008-1897f26aafe3" alt="Modern Office" class="img-fluid rounded shadow-lg">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="mb-4">About Us</h2>
+                <p class="lead">We're a team of AI experts, data scientists, and engineers passionate about pushing the boundaries of what's possible with artificial intelligence.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i data-feather="check" class="me-2"></i>10+ years of industry experience</li>
+                    <li class="mb-3"><i data-feather="check" class="me-2"></i>Global team of AI experts</li>
+                    <li class="mb-3"><i data-feather="check" class="me-2"></i>Cutting-edge research and development</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="mb-4">Contact Us</h2>
+                <form action="{{ url_for('contact') }}" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="mb-4">Newsletter</h2>
+                <p class="lead mb-4">Stay updated with our latest AI innovations and insights.</p>
+                <form action="{{ url_for('subscribe') }}" method="POST" class="newsletter-form">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

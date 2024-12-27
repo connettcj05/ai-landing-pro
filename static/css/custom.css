@@ -1,0 +1,65 @@
+/* Custom styles to complement Bootstrap theme */
+.hero-section {
+    padding-top: 80px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1655393001768-d946c97d6fd1') no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(33, 37, 41, 0.9);
+}
+
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--bs-primary);
+}
+
+.feature-icon i {
+    color: white;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.social-icons a {
+    color: var(--bs-light);
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--bs-primary);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Alert positioning */
+.alert {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 1000;
+    max-width: 400px;
+}
+
+/* Responsive images */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
